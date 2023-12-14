@@ -18,33 +18,29 @@ const User = () => {
     const [users, setUsers ] = useState([]);
     useEffect(()=>{
         if(data){
-            setUsers(data);
-            console.log(data);
+            setUsers(data.users);
         }
     },[data])
 
     useEffect(()=>{
-        // if(data.length>0){
+        if(data){
             showUsers();
-            console.log(users);
-        // }
+        }
 
     },[users])
     
     const showUsers = () => {
         return(
-            users.length > 0?
-            users.map((user: any)=> {
+            users.map((user: any, index)=> {
                 return(
                     <>
-                        <tr>
+                        <tr key={index}>
                         <td>{user.name}</td>
                         <td>{user.email}</td>
                         </tr>
                     </>
                 )
-            }):
-            <></>
+            })
         )
     }
 
