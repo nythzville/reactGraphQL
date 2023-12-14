@@ -1,0 +1,25 @@
+React Typescript
+
+npx create-react-app app-name --template typescript
+
+\\ Install Reactstrap
+npm install reactstrap
+npm install --save bootstrap
+
+\\ add this on App.ts
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+npm i @capacitor/core
+npm i -D @capacitor/cli
+npx cap init
+
+npm i @capacitor/android @capacitor/ios
+npx cap add android
+npx cap add ios
+npx cap sync 
+
+npm install @capacitor/android
+npx cap add android
+npx cap open android
+npx cap run android
